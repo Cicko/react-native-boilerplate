@@ -1,3 +1,4 @@
-rootProject.name = 'EasyMove'
-
 include ':app'
+rootProject.name = 'EasyMove'
+include ':react-native-navigation'
+project(':react-native-navigation').projectDir = new File(rootProject.projectDir, '../node_modules/react-native-navigation/lib/android/app/')
