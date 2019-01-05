@@ -9,6 +9,6 @@ import { getRegistrationId } from '../../lib/util/index';
 import HomeScreen from './component/HomeScreen';
 
 export default {
-    id: getRegistrationId('Screens', 'home'),
+    id: getRegistrationId('Screens', 'Home'),
     component: HomeScreen,
 };

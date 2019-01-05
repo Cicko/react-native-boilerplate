@@ -7,6 +7,6 @@
  */
 import getRegistrationId from './navigation/getRegistrationId';
 
-export default {
+export {
     getRegistrationId,
 }
