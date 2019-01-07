@@ -11,6 +11,7 @@ export default {
         componentBackgroundColor: '#e8e8e8',
         orientation: ['portrait']
     },
+    /*
     bottomTab: {
         iconColor: '#1B4C77',
         selectedIconColor: '#0f0',
@@ -19,6 +20,7 @@ export default {
         fontFamily: 'HelveticaNeue-Italic',
         fontSize: 13
     },
+    */
     _animations: {
         push: {
             waitForRender: false,
