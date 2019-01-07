@@ -7,7 +7,17 @@
  */
 
 import React, { Component } from 'react';
-import { View, Text, StyleSheet } from 'react-native';
+import { View, StyleSheet } from 'react-native';
+import {
+    Container,
+    Content,
+    Form,
+    Item,
+    Input,
+    Label,
+    Button,
+    Text,
+} from 'native-base';
 
 const styles = StyleSheet.create({
     container: {
@@ -21,17 +31,31 @@ const styles = StyleSheet.create({
         textAlign: 'center',
         margin: 10,
     },
+    buttonContainer: {
+        justifyContent: 'center',
+        flexDirection: 'row',
+    },
+    button: {
+        width: '90%',
+        textAlign: 'center',
+        justifyContent: 'center',
+        margin: 10,
+    },
 });
 
 
 class HomeScreen extends Component {
     render() {
         return (
-            <View style={styles.container}>
-                <Text style={styles.welcome}>
-                    Welcome to the HomeScreen
-                </Text>
-            </View>
+            <Container>
+                <Content>
+                    <View style={styles.buttonContainer}>
+                        <Button style={styles.button}>
+                            <Text> Show magic </Text>
+                        </Button>
+                    </View>
+                </Content>
+            </Container>
         );
     }
 }
