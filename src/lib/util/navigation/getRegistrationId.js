@@ -5,7 +5,7 @@
  * @date 04.01.19
  *
  */
-import getEnv from '../getEnv';
+import getEnv from '../env/getEnv';
 
 const APP_NAME = getEnv('APP_NAME');
 
