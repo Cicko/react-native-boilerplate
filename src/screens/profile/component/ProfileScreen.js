@@ -2,9 +2,10 @@
  *
  * @author Rudolf Cicko
  * @email rudolf.cicko@wtl.de
- * @date 04.01.19
+ * @date 07.01.19
  *
  */
+
 
 import React, { Component } from 'react';
 import { View, StyleSheet } from 'react-native';
@@ -40,12 +41,12 @@ const styles = StyleSheet.create({
 });
 
 
-class HomeScreen extends Component {
+class ProfileScreen extends Component {
     render() {
         return (
             <Container>
                 <Content>
-                    <Text> Home Screen </Text>
+                    <Text> Profile Screen </Text>
                     <View style={styles.buttonContainer}>
                         <Button style={styles.button}>
                             <Text> Show magic </Text>
@@ -57,4 +58,4 @@ class HomeScreen extends Component {
     }
 }
 
-export default HomeScreen;
+export default ProfileScreen;

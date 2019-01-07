@@ -5,8 +5,9 @@
  * @date 07.01.19
  *
  */
+import { assign } from 'lodash';
 
-export default {
+const defaultRootOptions = {
     root: {
         bottomTabs: {
             children: [{
@@ -21,8 +22,7 @@ export default {
                     }],
                     options: {
                         bottomTab: {
-                            text: 'Tab 1',
-                            //icon: require('../images/one.png'),
+                            icon: require('../../assets/img/icons/list.png'),
                             testID: 'FIRST_TAB_BAR_BUTTON'
                         }
                     }
@@ -30,14 +30,13 @@ export default {
             },
                 {
                     component: {
-                        name: 'EasyMove.Screens.Home',
+                        name: 'EasyMove.Screens.Profile',
                         passProps: {
                             text: 'This is tab 2'
                         },
                         options: {
                             bottomTab: {
-                                text: 'Tab 2',
-                                //icon: require('../images/two.png'),
+                                text: 'Favourites',
                                 testID: 'SECOND_TAB_BAR_BUTTON'
                             }
                         }
@@ -45,4 +44,6 @@ export default {
                 }]
         },
     }
-}
+};
+
+export default (options) => (assign(defaultRootOptions, options));

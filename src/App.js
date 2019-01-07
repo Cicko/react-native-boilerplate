@@ -6,7 +6,7 @@
  * @flow
  */
 import { Navigation } from 'react-native-navigation';
-import { defaultOptions, rootOptions } from './config/navigation';
+import { defaultOptions, getRootOptions } from './config/navigation';
 import { registerScreens } from './screens';
 import { Platform } from 'react-native';
 
@@ -45,7 +45,7 @@ function start() {
         //   }
         // });
 
-        Navigation.setRoot(rootOptions);
+        Navigation.setRoot(getRootOptions({}));
     });
 }
 
