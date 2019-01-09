@@ -6,9 +6,11 @@
  * @flow
  */
 import { Navigation } from 'react-native-navigation';
-import { defaultOptions, getRootOptions } from './config/navigation';
+import { defaultOptions, rootOptions } from './config/navigation';
 import { registerScreens } from './screens';
 import { Platform } from 'react-native';
+import getRegistrationId from './lib/util/navigation/getRegistrationId';
+import getIconImage from './lib/util/icon/getIconImage';
 
 if (Platform.OS === 'android') {
     alert = (title) => {
@@ -44,8 +46,49 @@ function start() {
         //     ]
         //   }
         // });
-
-        Navigation.setRoot(getRootOptions({}));
+        Promise.all([
+            getIconImage('list'),
+            getIconImage('star'),
+        ]).then((imgs) => {
+            Navigation.setRoot({
+                root: {
+                    bottomTabs: {
+                        children: [
+                            {
+                                component: {
+                                    id: 'Home',
+                                    name: 'EasyMove.Screens.Home',
+                                    text: 'Home',
+                                    passProps: {
+                                        text: 'Props passed through navigator',
+                                        myFunction: () => 'Hello from a function!',
+                                    },
+                                    options: {
+                                        bottomTab: {
+                                            icon: imgs[0],
+                                        },
+                                    },
+                                },
+                            },
+                            {
+                                component: {
+                                    name: 'EasyMove.Screens.Favourites',
+                                    id: 'Favourites',
+                                    passProps: {
+                                        text: 'This is tab 2',
+                                    },
+                                    options: {
+                                        bottomTab: {
+                                            icon: imgs[1],
+                                        }
+                                    }
+                                },
+                            },
+                        ],
+                    },
+                }
+            });
+        });
     });
 }
 

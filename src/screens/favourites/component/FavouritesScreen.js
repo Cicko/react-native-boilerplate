@@ -41,7 +41,7 @@ const styles = StyleSheet.create({
 });
 
 
-class ProfileScreen extends Component {
+class FavouritesScreen extends Component {
     render() {
         return (
             <Container>
@@ -58,4 +58,4 @@ class ProfileScreen extends Component {
     }
 }
 
-export default ProfileScreen;
+export default FavouritesScreen;

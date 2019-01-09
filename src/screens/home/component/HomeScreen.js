@@ -7,6 +7,7 @@
  */
 
 import React, { Component } from 'react';
+import PropTypes from 'prop-types';
 import { View, StyleSheet } from 'react-native';
 import {
     Container,
@@ -14,6 +15,7 @@ import {
     Button,
     Text,
 } from 'native-base';
+import { Navigation } from 'react-native-navigation';
 
 const styles = StyleSheet.create({
     container: {
@@ -41,11 +43,30 @@ const styles = StyleSheet.create({
 
 
 class HomeScreen extends Component {
+
+    static propTypes = {
+        text: PropTypes.string,
+    };
+
+    /**
+     * Simple constructor where also the screen is bind to the Navigation lifecycle.
+     * @param props
+     */
+    constructor(props) {
+        super(props);
+        Navigation.events().bindComponent(this);
+    }
+
+    componentDidAppear() {
+        console.log('Component did appear');
+    }
+
     render() {
         return (
             <Container>
                 <Content>
                     <Text> Home Screen </Text>
+                    <Text> {this.props.text} </Text>
                     <View style={styles.buttonContainer}>
                         <Button style={styles.button}>
                             <Text> Show magic </Text>

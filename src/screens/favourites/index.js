@@ -6,9 +6,9 @@
  *
  */
 import { getRegistrationId } from '../../lib/util/index';
-import ProfileScreen from './component/ProfileScreen';
+import FavouritesScreen from './component/FavouritesScreen';
 
 export default {
-    id: getRegistrationId('Screens', 'Profile'),
-    component: ProfileScreen,
+    id: getRegistrationId('Screens', 'Favourites'),
+    component: FavouritesScreen,
 };

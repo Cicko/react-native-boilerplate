@@ -7,9 +7,9 @@
  */
 
 import defaultOptions from './defaultOptions';
-import getRootOptions from './getRootOptions';
+import rootOptions from './rootOptions';
 
 export {
     defaultOptions,
-    getRootOptions,
+    rootOptions,
 }
