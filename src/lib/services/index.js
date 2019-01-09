@@ -7,7 +7,9 @@
  */
 
 import NavigationService from './navigation/NavigationService';
+import StoreService from './store/StoreService';
 
 export {
     NavigationService,
+    StoreService,
 }
