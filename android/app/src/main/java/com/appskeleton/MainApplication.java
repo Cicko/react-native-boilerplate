@@ -1,4 +1,4 @@
-package com.easymove;
+package com.appskeleton;
 
 import android.app.Application;
 
