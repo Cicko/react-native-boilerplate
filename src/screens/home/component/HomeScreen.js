@@ -16,6 +16,8 @@ import {
     Text,
 } from 'native-base';
 import { Navigation } from 'react-native-navigation';
+import { StoreService } from '../../../lib/services';
+import { buttonClick } from '../store/actions';
 
 const styles = StyleSheet.create({
     container: {
@@ -57,9 +59,17 @@ class HomeScreen extends Component {
         Navigation.events().bindComponent(this);
     }
 
+    static getTrigger(functionName) {
+        return `App/Src/Screens/Home/Component/HomeScreen.${functionName}`;
+    }
+
     componentDidAppear() {
         console.log('Component did appear');
     }
+
+    handleClick = () => {
+        StoreService.dispatch(buttonClick(), HomeScreen.getTrigger('handleClick'));
+    };
 
     render() {
         return (
@@ -68,7 +78,7 @@ class HomeScreen extends Component {
                     <Text> Home Screen </Text>
                     <Text> {this.props.text} </Text>
                     <View style={styles.buttonContainer}>
-                        <Button style={styles.button}>
+                        <Button style={styles.button} onClick={this.handleClick()}>
                             <Text> Show magic </Text>
                         </Button>
                     </View>
