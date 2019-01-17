@@ -35,6 +35,9 @@ $ npm run android
 ```
 
 ## TODOS
+- [x] Add *react-native-navigation* for navigation management
+- [x] Integrate native-base for easy-use and sexy-style components
+- [x] Integration of *react-native-vector-icons* that allows usage of plenty of beautiful and modern icons
 - [x] Add Redux
 - [ ] Explain the basic structure for faster adaption
 - [ ] Add backend communication
