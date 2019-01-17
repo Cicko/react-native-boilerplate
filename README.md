@@ -34,3 +34,9 @@ $ npm run ios
 $ npm run android
 ```
 
+## TODOS
+- [x] Add Redux
+- [ ] Explain the basic structure for faster adaption
+- [ ] Add backend communication
+- [ ] Add authentication
+- [ ] Add theme styling
