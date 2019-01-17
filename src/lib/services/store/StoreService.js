@@ -5,6 +5,9 @@
  * @date 09.01.19
  *
  */
+import {
+    assign,
+} from 'lodash';
 import { composeWithDevTools } from 'redux-devtools-extension';
 import {
     createStore as createReduxStore,
@@ -41,12 +44,22 @@ class StoreService {
      * @param state : Object : The default state
      */
     createStore = (state = {}) => {
-        this.reduxStore = createReduxStore(rootReducer);
+        this.reduxStore = createReduxStore(rootReducer, {}, composeWithDevTools());
 
         return this.reduxStore;
+    };
+
+    /**
+     * Dispatch an action
+     * @param action
+     * @param trigger
+     */
+    dispatch(action, trigger = null) {
+        if (!this.reduxStore) {
+            return null;
+        }
+        return this.reduxStore.dispatch(trigger ? assign(action, { trigger }) : action);
     }
-
-
 }
 
-export default StoreService;
+export default new StoreService;

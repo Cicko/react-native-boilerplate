@@ -19,7 +19,8 @@
     "recompose": "^0.30.0",
     "redux": "^4.0.1",
     "redux-devtools-extension": "^2.13.7",
-    "redux-observable": "^1.0.0"
+    "redux-observable": "^1.0.0",
+    "rxjs": "^6.3.3"
   },
   "devDependencies": {
     "babel-jest": "23.6.0",

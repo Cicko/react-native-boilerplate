@@ -6,7 +6,7 @@
  *
  */
 import { get } from 'lodash';
-import env from '../../../../.env.json';
+import env from '../../../../env.json';
 
 /**
  * Return an environment variable.

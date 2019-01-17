@@ -11,6 +11,7 @@ import { registerScreens } from './screens';
 import { Platform } from 'react-native';
 import getRegistrationId from './lib/util/navigation/getRegistrationId';
 import getIconImage from './lib/util/icon/getIconImage';
+import { StoreService } from './lib/services';
 
 if (Platform.OS === 'android') {
     alert = (title) => {
@@ -32,6 +33,7 @@ if (Platform.OS === 'android') {
 
 function start() {
     registerScreens();
+    StoreService.createStore();
     Navigation.events().registerAppLaunchedListener(async () => {
         Navigation.setDefaultOptions(defaultOptions);
 

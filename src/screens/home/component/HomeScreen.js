@@ -63,10 +63,6 @@ class HomeScreen extends Component {
         return `App/Src/Screens/Home/Component/HomeScreen.${functionName}`;
     }
 
-    componentDidAppear() {
-        console.log('Component did appear');
-    }
-
     handleClick = () => {
         StoreService.dispatch(buttonClick(), HomeScreen.getTrigger('handleClick'));
     };
@@ -78,7 +74,7 @@ class HomeScreen extends Component {
                     <Text> Home Screen </Text>
                     <Text> {this.props.text} </Text>
                     <View style={styles.buttonContainer}>
-                        <Button style={styles.button} onClick={this.handleClick()}>
+                        <Button style={styles.button} onPress={this.handleClick}>
                             <Text> Show magic </Text>
                         </Button>
                     </View>
