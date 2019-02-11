@@ -24,7 +24,7 @@ Install dependencies
 ```
 $ npm install
 ```
-Choose the name you always wanted 
+Choose the name you always desired for your app 
 ```
 $ react-native-rename "Avocado Milk App"
 ```
