@@ -45,3 +45,4 @@ $ npm run android
 - [ ] Add authentication
 - [ ] Add theme styling
 - [ ] Add [react-native-navigation-bar-color](https://github.com/thebylito/react-native-navigation-bar-color)
+- [ ] Add [react-native-admob](https://github.com/sbugert/react-native-admob)
