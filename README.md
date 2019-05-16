@@ -44,3 +44,4 @@ $ npm run android
 - [ ] Add backend communication
 - [ ] Add authentication
 - [ ] Add theme styling
+- [ ] Add [react-native-navigation-bar-color](https://github.com/thebylito/react-native-navigation-bar-color)
