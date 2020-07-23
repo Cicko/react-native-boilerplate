@@ -1,7 +1,7 @@
 /**
  *
  * @author Rudolf Cicko
- * @email rudolf.cicko@wtl.de
+ * @email rudolfcickodev@gmail.com
  * @date 04.01.19
  *
  */
